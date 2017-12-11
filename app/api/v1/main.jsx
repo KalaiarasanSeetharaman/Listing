@@ -1,5 +1,5 @@
 var axios = require('axios');
-const OPEN_FOODAPP_URL = "http://192.168.0.106:1003/";
+const OPEN_FOODAPP_URL = "";
 module.exports = {
    getLists: function () {
     var requestUrl = `${OPEN_FOODAPP_URL}api/task/lists`;
