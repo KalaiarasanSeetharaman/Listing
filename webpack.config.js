@@ -24,11 +24,12 @@ module.exports = {
     resolve: {
       alias: {
        "Main":path.resolve(__dirname, "app/components/layout/Main.jsx"),
-       "Home":path.resolve(__dirname, "app/components/Home.jsx"),
+       "Login":path.resolve(__dirname, "app/components/User/Login.jsx"),
+       "ListComponent":path.resolve(__dirname, "app/components/Listcomponent.jsx"),
        "actions": path.resolve(__dirname, "app/actions/lists.jsx"),
        "reducers": path.resolve(__dirname, "app/reducers/lists.jsx"),
        "configureStore": path.resolve(__dirname, "app/store/configureStore.jsx"),
-       "api": path.resolve(__dirname, "app/api/v1/main.jsx"),
+       "api": path.resolve(__dirname, "app/api/v1/list.jsx"),
        "mainstyle": path.resolve(__dirname, "app/styles/style.css"),
        'DeleteButton':path.resolve(__dirname, "app/components/Delete.jsx"),
      },

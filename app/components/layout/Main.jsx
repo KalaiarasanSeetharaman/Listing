@@ -1,15 +1,21 @@
+/***Importing React , React DOM, List Component***/
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from 'Home'
+import ListComponent from 'ListComponent'
+
+/***In Main Component Including Our <ListComponent apiUrl={this.props.apiUrl} onEventHandle={this.eventMethod}></ListComponent> Listing Component With onEventHandle Property
+ by eventMethod***/
 class Main extends React.Component {
-	handlemessage(method_name){
+	eventMethod(method_name){
 		alert(method_name);
 	}
 	
 	render(){
+		
 		return(
 			<div>
-				<Home onEventHandle={this.handlemessage}></Home>
+				
+				{this.props.children}
 			</div>
 		);
 	}
