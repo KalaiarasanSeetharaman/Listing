@@ -50,7 +50,7 @@ module.exports = {
         {test: /\.(scss|css)$/, include: /node_modules/, loaders: [  'style-loader', 'css-loader', 'sass-loader' ]},
         {
             test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'url-loader?limit=10000&name=[name].[ext]',
+            loader: 'url-loader?limit=100000000000000&name=public/fonts/[name].[ext]',
         }, {
             test: /\.(wav|mp3|pdf)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: 'file-loader',

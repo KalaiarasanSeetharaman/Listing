@@ -11,11 +11,11 @@ import 'popper.js/dist/umd/popper'
 import 'bootstrap/dist/js/bootstrap'
 
 //Node Module Css Importing
-//import 'font-awesome/css/font-awesome.css'
+import 'font-awesome/css/font-awesome.css'
 import "bootstrap/dist/css/bootstrap.css"
 
 //Custom Style Importing
-//import "mainstyle"
+import "mainstyle"
 
 
 // Importing Provider Component
