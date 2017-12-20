@@ -5,10 +5,13 @@ import {BrowserRouter as Router,  Route, Link} from 'react-router-dom'
 //Main Component  importing
 import Main from 'Main'
 import Login from 'Login'
-
+import Dashboard from 'Dashboard'
 //Node Module Js Importing 
 import 'popper.js/dist/umd/popper'
 import 'bootstrap/dist/js/bootstrap'
+import {AUTHENTICATE_THE_USER} from 'loginAction';
+
+import RequireAuth  from  'requireAuth';
 
 //Node Module Css Importing
 import 'font-awesome/css/font-awesome.css'
@@ -28,6 +31,12 @@ var actions = require('actions');
 var store = require('configureStore').configure();
 
 
+
+// Check for token and update application state if required
+const token = localStorage.getItem('token');
+if (token) {
+    store.dispatch({ type: AUTHENTICATE_THE_USER });
+}
 /*ReactDOM.render(
 <Provider store={store}>
   	<Main apiUrl="http://192.168.0.106:1003/api/task/lists"></Main>
@@ -49,6 +58,7 @@ ReactDOM.render(
     <main>
       <Route path='/' component={Main} />
       <Route exact  path='/' component={Login} />
+      <Route path="/dashboard" component={RequireAuth(Dashboard)} />
     </main>
   </Router>
  </Provider>,

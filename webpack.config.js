@@ -25,6 +25,11 @@ module.exports = {
       alias: {
        "Main":path.resolve(__dirname, "app/components/layout/Main.jsx"),
        "Login":path.resolve(__dirname, "app/components/User/Login.jsx"),
+       "Dashboard":path.resolve(__dirname, "app/components/User/Dashboard.jsx"),
+       'loginAction':path.resolve(__dirname, "app/actions/loginAction.jsx"),
+       'loginReducer':path.resolve(__dirname, "app/reducers/loginReducer.jsx"),
+       'loginAPI':path.resolve(__dirname, "app/api/v1/login.jsx"),
+       'requireAuth':path.resolve(__dirname, "app/helpers/require_auth.jsx"),
        "ListComponent":path.resolve(__dirname, "app/components/Listcomponent.jsx"),
        "actions": path.resolve(__dirname, "app/actions/lists.jsx"),
        "reducers": path.resolve(__dirname, "app/reducers/lists.jsx"),
